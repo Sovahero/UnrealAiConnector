@@ -1,4 +1,4 @@
-![Logo](screenshot/Logo.png)
+![AiConnectorLogo](https://github.com/user-attachments/assets/3329e122-0b56-4f57-9bbb-637db1b91776)<br>
 
 ## AI Connector for Unreal Engine 5
 
@@ -6,8 +6,7 @@
 LLM Connector is a plugin that integrates Large Language Models into Unreal Engine projects. It enables connection between your game and AI models through API services such as OpenRouter and others.
 
 The plugin provides a framework for sending user requests to LLM via HTTP and processing returned responses using JSON.
-
-![GIF](screenshot/TestGif.gif)
+<img src="https://github.com/user-attachments/assets/5a16ad85-88c7-4f9f-b531-7bd11127c127" alt="AiTest" width="800">
 
 ## Core Concepts
 
@@ -30,7 +29,7 @@ The LLM response comes in JSON format with the following structure:
   "message": "Text message for the user"
 }
 ```
-![GeneralPipeline](screenshot/GeneralPipeline.png)
+![GeneralPipeline](https://github.com/user-attachments/assets/4e746c75-c9f7-4d9c-91cc-add3db5b6925)<br>
 
 ### Command System
 
@@ -49,10 +48,10 @@ The repository includes a UE5.5 Blueprint test project that demonstrates a simpl
 ### Plugin Installation
 
 1. Copy `LLMConnector` to your project's `Plugins` directory (create it if it doesn't exist)
-![ProjectFolder](screenshot/ProjectFolder.png)
+![ProjectFolder](https://github.com/user-attachments/assets/2e3b4b3d-51e9-497b-ab1b-8ece451f8a1a)<br>
 
 2. Enable the plugin in `Edit` > `Plugins`
-![ProjectPlugins](screenshot/ProjectPlugins.png)
+![ProjectPlugins](https://github.com/user-attachments/assets/89de5eb6-a141-4563-b93a-722183372a91)<br>
 
 3. Restart the editor
 
@@ -60,46 +59,47 @@ The repository includes a UE5.5 Blueprint test project that demonstrates a simpl
 
 To use the plugin:
 
-1. Create an account on [OpenRouter](https://openrouter.ai)
+1. Create an account on [OpenRouter](https://openrouter.ai)<br>
 2. Generate an API key
-![ApiKey](screenshot/OpenRouterApiKey.png)
+![ApiKey](https://github.com/user-attachments/assets/57171222-d908-4dc1-b05f-60923f2a03da)<br>
 
 3. It's recommended to add funds to your account, for example $5, but you can also choose free models
 4. In `Models`, select a compatible AI - Claude, GPT, etc. (Google: Gemini 2.0 Flash is set by default)
-![Model](screenshot/OpenRouterModel.png)
+![Model](https://github.com/user-attachments/assets/9f34f3dc-d087-426f-ae71-7fb0bb59921d)<br>
 
 5. Go to `Project Settings` > `Plugins` > `LLMSettings`
 6. Enter your data in `ApiKey` and `ModelName`
-![ProjectSettings](screenshot/ProjectSettings.png)
-
+![ProjectSettings](https://github.com/user-attachments/assets/38df097f-cac3-4a04-8028-fa46a6841d65)<br>
 
 ## Blueprint Quick Start
 
 ### Sending Messages
 
 Function for sending a message and receiving a response
-![SendPrompt](screenshot/SendPrompt.png)
+![SendLLMPrompt](https://github.com/user-attachments/assets/3b2677ad-0bbc-4f08-b444-c81eb618d9a2)<br>
 
 ### System Messages
 
 To ensure the AI understands its role during the dialogue, it's recommended to add the main game context in the first messages and reserve them from deletion
-![InitContext](screenshot/InitContext.png)
+![InitContext](https://github.com/user-attachments/assets/1e086f5b-52e8-4988-bed0-24fb28c4e3e6)<br>
 
 ### Creating Command Handlers
 
 To separate logic and avoid writing everything in one place, it's recommended to use the command handler system. These handlers will intercept the response from the AI and execute the necessary logic
 1. Create a Blueprint inherited from LLMCommandHandlerBase
-![LLMCommandHandlerBase](screenshot/LLMCommandHandlerBase.png)
+![LLMCommandHandlerBase](https://github.com/user-attachments/assets/f3cd9ff8-6f39-491e-91a5-3a1df0f1008d)<br>
 or an ActorComponent inherited from LLMCommandComponent
-![LLMCommandComponent](screenshot/LLMCommandComponent.png)
+![LLMCommandComponent](https://github.com/user-attachments/assets/5b1506de-453f-4059-85ad-b4ad0a585bd7)<br>
 
-2. Override the `CanExecuteCommand` and `ExecuteCommand` functions
-![LLMCommandOverride](screenshot/LLMCommandOverride.png)
 
-3. Configure the command handler parameters and register it with LLMConnector
-![LLMCommandHandlerBaseParams](screenshot/LLMCommandHandlerBaseParams.png)
+3. Override the `CanExecuteCommand` and `ExecuteCommand` functions
+![LLMCommandOverride](https://github.com/user-attachments/assets/08be3911-c53b-47d7-b89f-c59c425e99b7)<br>
+
+4. Configure the command handler parameters and register it with LLMConnector
+![LLMCommandHandlerBaseParams](https://github.com/user-attachments/assets/97df44bc-39af-4a0a-9949-40142b2cae63)<br>
 For ActorComponent, attach it to an Actor and set the flag
-![LLMCommandComponentParams](screenshot/LLMCommandComponentParams.png)
+![LLMCommandComponentParams](https://github.com/user-attachments/assets/59ecea07-f7ce-41b8-8c3e-090deacae76b)<br>
+
 
 ## C++ Quick Start
 
