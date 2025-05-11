@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "LLMConnector",
+	"Description": "Plugin for connect to LLM via http",
+	"Category": "Other",
+	"CreatedBy": "Sovahero",
+	"CreatedByURL": "",
+	"DocsURL": "https://github.com/Sovahero/UnrealAiConnector",
+	"MarketplaceURL": "https://github.com/Sovahero/UnrealAiConnector/issues",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "LLMConnector",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
